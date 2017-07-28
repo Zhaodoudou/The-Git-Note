@@ -1,0 +1,73 @@
+ 
+命令：
+Git status //看当前文件的状况（看文件在工作去还是在暂存区）
+Git add *.c //把*.c文件从工作区添加到暂存区
+Git commit -m”提交描述”  //把*.c文件从暂存区添加到仓库
+Mkdir 名字 //创建文件夹
+Pwd //当前目录地址
+Git init //生成隐藏文件（用来存储仓库所有数据信息）
+Touch *.c//创建一个*.c文件
+Mr *.c//删除*.c文件
+Vi *.c//添加东西
+初始化：
+1.	设置用户名
+Git config --global user.name ‘zhongrongzhao’
+2.	设置用户邮箱
+Git config --global user.name ’邮箱地址’
+
+
+
+
+
+
+
+
+操作顺序
+①	以下在桌面操作
+1.	新建一个文件夹在桌面
+2.	在新建文件夹里右击选择‘Git Bash Here’
+②	以下是在控制台操作
+3.	设置用户名：
+Git config --global user.name ‘zhongrongzhao’
+4.	设置用户邮箱：
+Git config –global user.name ‘邮箱地址’
+5.	创建名为text的文件夹：
+Mkdir text
+6.	在文件内初始化git（即创建git仓库）
+Cd text//进去text文件夹
+Git init//生成隐藏文件，用于存储仓库的所有信息
+7.	创建一个名为a1.php文件
+Touch a1.php
+Git status//查看状态
+8.	把名为a1.php从工作区放到暂存区
+Git add a1.php
+Git status//查看状态
+9.	把名为a1.php从暂存区放到仓库
+Git commit -m ‘add a1.php’
+Git status//查看状态
+③	修改文件
+Ls
+Git status//查看状态
+vi或vim a1.php
+写入东西
+按‘ESC’键
+在命令模式下键入‘zz’或‘：wq’保存修改并退出vi
+如果知识想保存文件，则输入‘w’
+放弃所有文件修改：按下 "ESC" 键进入命令模式，键入 ":q!" 回车后放弃修改并退出vi。
+继续进行文件操作：按下 "ESC" 键进入命令模式，键入 ":e!" ，回车后回到命令模式。
+Cat a1.php//查看里面的东西
+Git status//查看状态
+10.	把已修改的a1.php从工作区放到暂存区
+Git add a1.php
+Git status//查看状态
+11.	把已修改的a1.php从暂存区放到仓库
+Git commit -m ‘第一次通过git修改文件并提交到仓库’
+Git status//查看状态
+④	删除仓库文件
+Rm -rf a1.php//删除暂存区的a1.php
+12.	把已修改的a1.php从工作区放到暂存区
+Git rm a1.php
+13.	把已修改的a1.php从暂存区放到仓库
+Git commit -m ‘第一次通过git删除仓库文件’
+Git status//查看状态
+
